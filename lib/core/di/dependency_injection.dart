@@ -9,5 +9,6 @@ final getIt = GetIt.instance;
 void initGetIt() {
   getIt.registerLazySingleton<LoginCubit>(() => LoginCubit(getIt()));
   getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(getIt()));
-  getIt.registerLazySingleton<ApiHandler>(() => ApiHandler(Dio()));
+  getIt.registerLazySingleton<ApiHandler>(
+      () => ApiHandler(createDioandSetupInterceptors()));
 }
