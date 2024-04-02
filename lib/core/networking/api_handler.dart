@@ -11,7 +11,7 @@ abstract class ApiHandler {
   factory ApiHandler(Dio dio, {String baseUrl}) = _ApiHandler;
 
   @GET('my-gallery')
-  Future<List<String>> getAllImages();
+  Future<List<String>> getAllImages(@Header('Authorization') String userToken);
 
   @POST('auth/login')
   Future<User> login(@Body() UserInputData userData);

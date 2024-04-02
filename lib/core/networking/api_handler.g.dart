@@ -21,10 +21,11 @@ class _ApiHandler implements ApiHandler {
   String? baseUrl;
 
   @override
-  Future<List<String>> getAllImages() async {
+  Future<List<String>> getAllImages(String userToken) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'Authorization': userToken};
+    _headers.removeWhere((k, v) => v == null);
     const Map<String, dynamic>? _data = null;
     final _result =
         await _dio.fetch<List<dynamic>>(_setStreamType<List<String>>(Options(

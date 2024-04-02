@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:promina_angency_task/core/di/dependency_injection.dart';
 
 void main() {
+  initGetIt();
   runApp(const MyApp());
 }
 
