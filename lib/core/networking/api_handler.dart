@@ -13,6 +13,9 @@ abstract class ApiHandler {
   @GET('my-gallery')
   Future<List<String>> getAllImages(@Header('Authorization') String userToken);
 
+  // @GET('my-gallery/{id}')
+  // Future<List<String>> getAllImages(@Path('id') int id);
+
   @POST('auth/login')
   Future<User> login(@Body() UserInputData userData);
 

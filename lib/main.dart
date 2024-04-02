@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:promina_angency_task/core/di/dependency_injection.dart';
+import 'package:promina_angency_task/features/login/presentation/pages/login_screen.dart';
 
 void main() {
   initGetIt();
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      home: const LoginScreen(),
     );
   }
 }
